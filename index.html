@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOUTUBE CLONE</title>
+    <link rel="stylesheet" href="../src/output.css" />
+
+
+    <style>
+        /* quick inline test */
+        .test-no-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .test-no-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-neutral-900 h-screen">
+
+    <div class="fixed top-0 left-0 w-full z-50 bg-neutral-900/80 backdrop-blur-md backdrop-saturate-50">
+        <!-- creating the navbar by dividing it into three parts -->
+        <header class="flex h-[60px] w-full z-50 ">
+            <div class="text-amber-50  w-[250px] flex justify-around items-center">
+                <!-- menu bar -->
+
+                <button
+                    class="h-[30px] w-[30px] rounded-full flex justify-center items-center hover:bg-neutral-800 cursor-pointer">
+                    <img src="/images/menu.png" alt="profile" />
+                </button>
+
+                <!-- youtube logo -->
+                <span class="flex justify-center items-center font-semibold "><img src="/images/youtube.png"
+                        alt="YOUTUBElogo" class="block" />YouTube</span>
+            </div>
+
+            <div class="text-amber-50 w-full flex justify-center items-center">
+                <!-- search bar -->
+                <div>
+
+                    <label for="searchbar"></label>
+                    <input type="text" id="searchbar" placeholder="search" class="bg-neutral-900 rounded-l-full w-[450px] h-[30px] flex items-center pl-[25px] text-neutral-500 border border-white/20
+                     focus:border-blue-400 focus:outline-none">
+
+                </div>
+
+                <!-- search icon -->
+                <span class="rounded-r-full bg-neutral-800 px-[15px] py-[6px] border border-white/20"><img
+                        src="/images/search.png" alt="searchicon" /></span>
+
+                <!-- mic botton -->
+                <span
+                    class="bg-neutral-800 ml-[5px] px-[15px] py-[7px] rounded-full hover:bg-neutral-700 cursor-pointer"><img
+                        src="/images/mic.png" alt="micicon" /></span>
+            </div>
+
+            <div class="text-amber-50 flex justify-end items-center space-x-4 flex-shrink-0">
+                <!-- create botton -->
+                <button
+                    class="flex items-center bg-neutral-800 rounded-full px-4 py-1 hover:bg-neutral-700 cursor-pointer">
+                    <img src="/images/add.png" alt="plusicon" class="h-4 w-4 mr-2" />
+                    <span>Create</span>
+                </button>
+
+                <!-- notification icon -->
+                <span
+                    class="px-[8px] h-[30px] w-[30px] rounded-full flex justify-center items-center hover:bg-neutral-800 cursor-pointer"><img
+                        src="/images/bell.png" alt="bellicon" /></span>
+
+                <!-- profile  -->
+
+                <button class="h-[30px] w-[30px] rounded-full bg-neutral-800 flex justify-center items-center">
+                    <img src="/images/profile.png" alt="profile" class="h-[30px] w-[30px] rounded-full" />
+                </button>
+            </div>
+
+
+        </header>
+
+
+
+
+
+        <div class=" flex space-x-2 p-[10px] ml-[70px] w-[calc(100%-70px)]">
+
+            <button
+                class="px-3 py-1 rounded-xl w-auto bg-neutral-800 text-white font-semibold focus:bg-white focus:text-black hover:cursor-pointer ">
+                All
+            </button>
+            <button
+                class="px-3 py-1 rounded-xl w-auto bg-neutral-800 text-white font-semibold focus:bg-white focus:text-black hover:cursor-pointer ">
+                Gaming
+            </button>
+            <button
+                class="px-3 py-1 rounded-xl w-auto bg-neutral-800 text-white font-semibold focus:bg-white focus:text-black hover:cursor-pointer ">
+                Esports
+            </button>
+            <button
+                class="px-3 py-1 rounded-xl w-auto bg-neutral-800 text-white font-semibold focus:bg-white focus:text-black hover:cursor-pointer ">
+                Music
+            </button>
+            <button
+                class="px-3 py-1 rounded-xl w-auto bg-neutral-800 text-white font-semibold focus:bg-white focus:text-black hover:cursor-pointer ">
+                Skills
+            </button>
+            <button
+                class="px-3 py-1 rounded-xl w-auto bg-neutral-800 text-white font-semibold focus:bg-white focus:text-black hover:cursor-pointer ">
+                Live
+            </button>
+            <button
+                class="px-3 py-1 rounded-xl w-auto bg-neutral-800 text-white font-semibold focus:bg-white focus:text-black hover:cursor-pointer ">
+                Science
+            </button>
+            <button
+                class="px-3 py-1 rounded-xl w-auto bg-neutral-800 text-white font-semibold focus:bg-white focus:text-black hover:cursor-pointer ">
+                News
+            </button>
+            <button
+                class="px-3 py-1 rounded-xl w-auto bg-neutral-800 text-white font-semibold focus:bg-white focus:text-black hover:cursor-pointer ">
+                Trailers
+            </button>
+            <button
+                class="px-3 py-1 rounded-xl w-auto bg-neutral-800 text-white font-semibold focus:bg-white focus:text-black hover:cursor-pointer ">
+                Data
+            </button>
+            <button
+                class="px-3 py-1 rounded-xl w-auto bg-neutral-800 text-white font-semibold focus:bg-white focus:text-black hover:cursor-pointer ">
+                Comedy
+            </button>
+            <button
+                class="px-3 py-1 rounded-xl w-auto bg-neutral-800 text-white font-semibold focus:bg-white focus:text-black hover:cursor-pointer ">
+                Comic
+            </button>
+            <button
+                class="px-3 py-1 rounded-xl w-auto bg-neutral-800 text-white font-semibold focus:bg-white focus:text-black hover:cursor-pointer ">
+                AI
+            </button>
+            <button
+                class="px-3 py-1 rounded-xl w-auto bg-neutral-800 text-white font-semibold focus:bg-white focus:text-black hover:cursor-pointer ">
+                Naruto
+            </button>
+            <button
+                class="px-3 py-1 rounded-xl w-auto bg-neutral-800 text-white font-semibold focus:bg-white focus:text-black hover:cursor-pointer ">
+                Colleges
+            </button>
+            <button
+                class="px-3 py-1 rounded-xl w-auto bg-neutral-800 text-white font-semibold focus:bg-white focus:text-black hover:cursor-pointer ">
+                Anime
+            </button>
+            <button
+                class="px-3 py-1 rounded-xl w-auto bg-neutral-800 text-white font-semibold focus:bg-white focus:text-black hover:cursor-pointer ">
+                Manga
+            </button>
+        </div>
+
+    </div>
+
+
+
+    <!-- sidebar -->
+
+    <div class="fixed top-[60px] left-0 w-[70px] h-[calc(100%-60px)] z-60">
+        <!-- home -->
+        <a href="/home.html"
+            class="flex flex-col justify-center items-center h-[64px] w-[64px] rounded-xl hover:bg-neutral-800">
+            <img src="/images/home.png" alt="homeicon" class="h-[16px] w-[16px]" />
+            <span class="text-[10px] text-white pt-[8px]">Home</span>
+        </a>
+
+        <!-- shorts -->
+        <a href="/home.html"
+            class="flex flex-col justify-center items-center h-[64px] w-[64px] rounded-xl hover:bg-neutral-800">
+            <img src="/images/shortslogo(white).png" alt="homeicon" class="h-[16px] w-[16px]" />
+            <span class="text-[10px] text-white pt-[8px]">shorts</span>
+        </a>
+
+        <!-- Subscription -->
+        <a href="/home.html"
+            class="flex flex-col justify-center items-center h-[64px] w-[64px] rounded-xl hover:bg-neutral-800">
+            <img src="/images/subscribe.png" alt="homeicon" class="h-[16px] w-[16px]" />
+            <span class="text-[10px] text-white pt-[8px]">Subscription</span>
+        </a>
+
+        <!-- Account -->
+        <a href="/home.html"
+            class="flex flex-col justify-center items-center h-[64px] w-[64px] rounded-xl hover:bg-neutral-800">
+            <img src="/images/userlogo.png" alt="homeicon" class="h-[16px] w-[16px]" />
+            <span class="text-[10px] text-white pt-[8px]">You</span>
+        </a>
+
+        <!-- Downloads -->
+        <a href="/home.html"
+            class="flex flex-col justify-center items-center h-[64px] w-[64px] rounded-xl hover:bg-neutral-800">
+            <img src="/images/download.png" alt="homeicon" class="h-[16px] w-[16px]" />
+            <span class="text-[10px] text-white pt-[8px]">Downloads</span>
+        </a>
+    </div>
+
+
+
+
+    <main class="flex ml-[70px] mt-[70px] flex-col">
+
+        <div class="px-[10px] flex flex-wrap mx-auto m-[52px]">
+            <!-- main content videos -->
+
+            <!-- <div class="mx-auto flex flex-wrap m-[52px]"> -->
+
+
+            <!-- first container -->
+            <div class="w-[420px] h-[360px] pr-[25px]">
+                <!-- thumbnail -->
+                <span class="inline-block pb-[15px]"><img src="/thumbnails/funny.png" alt="thumbnail"
+                        class="rounded-xl hover:cursor-pointer hover:scale-105 transition duration-500 " /></span>
+
+                <!-- video details like chanel name video name time etc -->
+                <div class="h-90px text-white flex justify-around">
+                    <div class="flex pr-[10px]">
+                        <span
+                            class="inline-block size-[30px] p-[10px] rounded-full bg-neutral-800 hover:cursor-pointer"><img
+                                src="/images/userlogo.png" alt="chanellogo" /></span>
+                    </div>
+
+                    <div class="w-full">
+                        <!-- video name or details -->
+
+                        <div class="pr-[10px]">
+                            <p class="text-white font-semibold">
+                                Top 10 funny moments || 2025 laughter dose
+                            </p>
+                        </div>
+
+                        <!-- channel name -->
+                        <div>
+                            <p class="text-gray[360] text-[13px]">James</p>
+                        </div>
+
+                        <div class="flex">
+                            <span>
+                                <p class="text-gray[360] text-[13px]">80M Views</p>
+                            </span>
+
+                            <span class="text-gray[360] text-[13px] px-[5px]">.</span>
+
+                            <span>
+                                <p class="text-gray[360] text-[13px]">1 years ago</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-x-4 flex-shrink-0">
+                        <span
+                            class="size-[30px] flex justify-center items-center rounded-full hover:bg-neutral-800 cursor-pointer"><img
+                                src="/images/threedots.png" alt="threedots" /></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- second container -->
+            <div class="w-[420px] h-[300px] pr-[25px]">
+                <!-- thumbnail -->
+                <span class="inline-block pb-[15px]"><img src="/thumbnails/coding.jpg" alt="thumbnail"
+                        class="rounded-xl hover:cursor-pointer hover:scale-105 transition duration-500" /></span>
+
+                <!-- video details like chanel name video name time etc -->
+                <div class="h-90px text-white flex justify-around">
+                    <div class="flex pr-[10px]">
+                        <span
+                            class="inline-block size-[30px] p-[10px] rounded-full bg-neutral-800 hover:cursor-pointer"><img
+                                src="/images/userlogo.png" alt="chanellogo" /></span>
+                    </div>
+
+                    <div class="w-full">
+                        <!-- video name or details -->
+
+                        <div class="pr-[10px]">
+                            <p class="text-white font-semibold">
+                                Become a developer fast with the help of AI || 2025 AI year
+                            </p>
+                        </div>
+
+                        <!-- channel name -->
+                        <div>
+                            <p class="text-gray[360] text-[13px]">code with David</p>
+                        </div>
+
+                        <div class="flex">
+                            <span>
+                                <p class="text-gray[360] text-[13px]">869M Views</p>
+                            </span>
+
+                            <span class="text-gray[360] text-[13px] px-[5px]">.</span>
+
+                            <span>
+                                <p class="text-gray[360] text-[13px]">1 months ago</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-x-4 flex-shrink-0">
+                        <span
+                            class="size-[30px] flex justify-center items-center rounded-full hover:bg-neutral-800 cursor-pointer"><img
+                                src="/images/threedots.png" alt="threedots" /></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- third container -->
+            <div class="w-[420px] h-[300px] pr-[25px]">
+                <!-- thumbnail -->
+                <span class="inline-block pb-[15px]"><img src="/thumbnails/Anime.jpg" alt="thumbnail"
+                        class="rounded-xl hover:cursor-pointer hover:scale-105 transition duration-500" /></span>
+
+                <!-- video details like chanel name video name time etc -->
+                <div class="h-90px text-white flex justify-around">
+                    <div class="flex pr-[10px]">
+                        <span
+                            class="inline-block size-[30px] p-[10px] rounded-full bg-neutral-800 hover:cursor-pointer"><img
+                                src="/images/userlogo.png" alt="chanellogo" /></span>
+                    </div>
+
+                    <div class="w-full">
+                        <!-- video name or details -->
+
+                        <div class="pr-[10px]">
+                            <p class="text-white font-semibold">
+                                Hidden details of One Piece || I bet y all missed this
+                            </p>
+                        </div>
+
+                        <!-- channel name -->
+                        <div>
+                            <p class="text-gray[360] text-[13px]">Ani-fever</p>
+                        </div>
+
+                        <div class="flex">
+                            <span>
+                                <p class="text-gray[360] text-[13px]">800M Views</p>
+                            </span>
+
+                            <span class="text-gray[360] text-[13px] px-[5px]">.</span>
+
+                            <span>
+                                <p class="text-gray[360] text-[13px]">1 years ago</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-x-4 flex-shrink-0">
+                        <span
+                            class="size-[30px] flex justify-center items-center rounded-full hover:bg-neutral-800 cursor-pointer"><img
+                                src="/images/threedots.png" alt="threedots" /></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- forth -->
+
+            <div class="w-[420px] h-[300px] pr-[25px]">
+                <!-- thumbnail -->
+                <span class="inline-block pb-[15px]"><img src="/thumbnails/gig_image.jpg" alt="thumbnail"
+                        class="rounded-xl hover:cursor-pointer hover:scale-105 transition duration-500" /></span>
+
+                <!-- video details like chanel name video name time etc -->
+                <div class="h-90px text-white flex justify-around">
+                    <div class="flex pr-[10px]">
+                        <span
+                            class="inline-block size-[30px] p-[10px] rounded-full bg-neutral-800 hover:cursor-pointer"><img
+                                src="/images/userlogo.png" alt="chanellogo" /></span>
+                    </div>
+
+                    <div class="w-full">
+                        <!-- video name or details -->
+
+                        <div class="pr-[10px]">
+                            <p class="text-white font-semibold">
+                                Create gig images in seconds || 2025 tech insights
+                            </p>
+                        </div>
+
+                        <!-- channel name -->
+                        <div>
+                            <p class="text-gray[360] text-[13px]">Learn with AI</p>
+                        </div>
+
+                        <div class="flex">
+                            <span>
+                                <p class="text-gray[360] text-[13px]">100M Views</p>
+                            </span>
+
+                            <span class="text-gray[360] text-[13px] px-[5px]">.</span>
+
+                            <span>
+                                <p class="text-gray[360] text-[13px]">1 years ago</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-x-4 flex-shrink-0">
+                        <span
+                            class="size-[30px] flex justify-center items-center rounded-full hover:bg-neutral-800 cursor-pointer"><img
+                                src="/images/threedots.png" alt="threedots" /></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- fifth -->
+
+            <div class="w-[420px] h-[300px] pr-[25px]">
+                <!-- thumbnail -->
+                <span class="inline-block pb-[15px]"><img src="/thumbnails/mrbeast_chllange.jpg" alt="thumbnail"
+                        class="rounded-xl hover:cursor-pointer hover:scale-105 transition duration-500" /></span>
+
+                <!-- video details like chanel name video name time etc -->
+                <div class="h-90px text-white flex justify-around">
+                    <div class="flex pr-[10px]">
+                        <span
+                            class="inline-block size-[30px] p-[10px] rounded-full bg-neutral-800 hover:cursor-pointer"><img
+                                src="/images/userlogo.png" alt="chanellogo" /></span>
+                    </div>
+
+                    <div class="w-full">
+                        <!-- video name or details -->
+
+                        <div class="pr-[10px]">
+                            <p class="text-white font-semibold">
+                                Today I am gonna spen 1B Dollars || challange to random people in tiktok
+                            </p>
+                        </div>
+
+                        <!-- channel name -->
+                        <div>
+                            <p class="text-gray[360] text-[13px]">MrBeast</p>
+                        </div>
+
+                        <div class="flex">
+                            <span>
+                                <p class="text-gray[360] text-[13px]">1B Views</p>
+                            </span>
+
+                            <span class="text-gray[360] text-[13px] px-[5px]">.</span>
+
+                            <span>
+                                <p class="text-gray[360] text-[13px]">1 years ago</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-x-4 flex-shrink-0">
+                        <span
+                            class="size-[30px] flex justify-center items-center rounded-full hover:bg-neutral-800 cursor-pointer"><img
+                                src="/images/threedots.png" alt="threedots" /></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIXTH -->
+
+            <div class="w-[420px] h-[300px] pr-[25px]">
+                <!-- thumbnail -->
+                <span class="inline-block pb-[15px]"><img src="/thumbnails/elonmask.jpg" alt="thumbnail"
+                        class="rounded-xl hover:cursor-pointer hover:scale-105 transition duration-500" /></span>
+
+                <!-- video details like chanel name video name time etc -->
+                <div class="h-90px text-white flex justify-around">
+                    <div class="flex pr-[10px]">
+                        <span
+                            class="inline-block size-[30px] p-[10px] rounded-full bg-neutral-800 hover:cursor-pointer"><img
+                                src="/images/userlogo.png" alt="chanellogo" /></span>
+                    </div>
+
+                    <div class="w-full">
+                        <!-- video name or details -->
+
+                        <div class="pr-[10px]">
+                            <p class="text-white font-semibold">
+                                Watch 20 Finance before 2025 ends || 2025 life changing hacks and tips
+                            </p>
+                        </div>
+
+                        <!-- channel name -->
+                        <div>
+                            <p class="text-gray[360] text-[13px]">Money-mania</p>
+                        </div>
+
+                        <div class="flex">
+                            <span>
+                                <p class="text-gray[360] text-[13px]">900M Views</p>
+                            </span>
+
+                            <span class="text-gray[360] text-[13px] px-[5px]">.</span>
+
+                            <span>
+                                <p class="text-gray[360] text-[13px]">2 months ago</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-x-4 flex-shrink-0">
+                        <span
+                            class="size-[30px] flex justify-center items-center rounded-full hover:bg-neutral-800 cursor-pointer"><img
+                                src="/images/threedots.png" alt="threedots" /></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- SHORTS SECTION -->
+
+        <div class="mx-auto">
+
+            <!-- shorts logo -->
+            <div class="flex justify-around items center ml-[10px] mb-[10px] mr-[25px]">
+
+                <div class="w-full flex items-center">
+
+                    <span class="pr-[5px]"><img src="/images/shorts(red).png" alt="shortslogo in red"
+                            class="inline-block size-[24px]">
+                    </span>
+                    <p class="text-[25px] text-white font-semibold">Shorts</p>
+
+                </div>
+
+                <div class="hover:cursor-pointer">
+                    <img src="/images/threedots.png" alt="threedots">
+                </div>
+
+
+            </div>
+
+
+            <!-- shorts content -->
+            <div>
+
+
+                <!-- first short -->
+                <div class="inline-block h-[450px] w-[250px] pr-[10px] pt-[8px]">
+
+                    <div class="inline-block w-[233px] h-[350px]"><img src="/shorts_thumbnail/first.jpg" alt="thumbnail"
+                            class="w-full h-full object-cover rounded-xl brightness-75 hover:cursor-pointer hover:scale-105 transition duration-500">
+                    </div>
+
+                    <div class="flex px-[5px] justify-around">
+
+                        <div class="text-white font-semibold w-full pr-[5px]">
+
+                            <!-- caption of the reel -->
+                            <div>
+
+                                <P>Trade like a pro in 2025 || secrets that noone tells</P>
+
+                            </div>
+
+                            <div class="text-gray-300 text-[12px]">
+                                <p>2M Views
+                            </div>
+
+                        </div>
+
+                        <div class="space-x-4 flex-shrink-0">
+                            <span
+                                class="size-[30px] flex justify-center items-center rounded-full hover:bg-neutral-800 cursor-pointer"><img
+                                    src="/images/threedots.png" alt="threedots" /></span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <!-- second -->
+
+                <div class="inline-block h-[450px] w-[250px] pr-[10px] pt-[8px]">
+
+                    <div class="inline-block w-[233px] h-[350px]"><img src="/shorts_thumbnail/second.jpg" alt="thumbnail"
+                            class="w-full h-full object-cover rounded-xl brightness-75 hover:cursor-pointer hover:scale-105 transition duration-500">
+                    </div>
+
+                    <div class="flex px-[5px] justify-around">
+
+                        <div class="text-white font-semibold w-full pr-[5px]">
+
+                            <!-- caption of the reel -->
+                            <div>
+
+                                <P>Create youtube shorts with AI || smart way to increase your productivity</P>
+
+                            </div>
+
+                            <div class="text-gray-300 text-[12px]">
+                                <p>29M Views
+                            </div>
+
+                        </div>
+
+                        <div class="space-x-4 flex-shrink-0">
+                            <span
+                                class="size-[30px] flex justify-center items-center rounded-full hover:bg-neutral-800 cursor-pointer"><img
+                                    src="/images/threedots.png" alt="threedots" /></span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <!-- Third -->
+
+                <div class="inline-block h-[450px] w-[250px] pr-[10px] pt-[8px]">
+
+                    <div class="inline-block w-[233px] h-[350px]"><img src="/shorts_thumbnail/third.jpg" alt="thumbnail"
+                            class="w-full h-full object-cover rounded-xl brightness-75 hover:cursor-pointer hover:scale-105 transition duration-500">
+                    </div>
+
+                    <div class="flex px-[5px] justify-around ">
+
+                        <div class="text-white font-semibold w-full pr-[5px]">
+
+                            <!-- caption of the reel -->
+                            <div>
+
+                                <P>Life tips 2k25 || secrets that noone tells</P>
+
+                            </div>
+
+                            <div class="text-gray-300 text-[12px]">
+                                <p>84M Views
+                            </div>
+
+                        </div>
+
+                        <div class="space-x-4 flex-shrink-0">
+                            <span
+                                class="size-[30px] flex justify-center items-center rounded-full hover:bg-neutral-800 cursor-pointer"><img
+                                    src="/images/threedots.png" alt="threedots" /></span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- forth -->
+
+                <div class="inline-block h-[450px] w-[250px] pr-[10px] pt-[8px]">
+
+                    <div class="inline-block w-[233px] h-[350px]"><img src="/shorts_thumbnail/forth.jpg" alt="thumbnail"
+                            class="w-full h-full object-cover rounded-xl brightness-75 hover:cursor-pointer hover:scale-105 transition duration-500">
+                    </div>
+
+                    <div class="flex px-[5px] justify-around">
+
+                        <div class="text-white font-semibold w-full pr-[5px]">
+
+                            <!-- caption of the reel -->
+                            <div>
+
+                                <P>Create thumbnails like pro|| secrets that noone tells</P>
+
+                            </div>
+
+                            <div class="text-gray-300 text-[12px]">
+                                <p>100M Views
+                            </div>
+
+                        </div>
+
+                        <div class="space-x-4 flex-shrink-0">
+                            <span
+                                class="size-[30px] flex justify-center items-center rounded-full hover:bg-neutral-800 cursor-pointer"><img
+                                    src="/images/threedots.png" alt="threedots" /></span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <!-- fifth -->
+
+                <div class="inline-block h-[450px] w-[250px] pr-[10px] pt-[8px]">
+
+                    <div class="inline-block w-[233px] h-[350px]"><img src="/shorts_thumbnail/fifth.jpg" alt="thumbnail"
+                            class="w-full h-full object-cover rounded-xl hover:cursor-pointer hover:scale-105 transition duration-500">
+                    </div>
+
+                    <div class="flex px-[5px] justify-around">
+
+                        <div class="text-white font-semibold w-full pr-[5px]">
+
+                            <!-- caption of the reel -->
+                            <div>
+
+                                <P>Finance tips 2025 || secrets that noone tells #wolfofthewallstreets</P>
+
+                            </div>
+
+                            <div class="text-gray-300 text-[12px]">
+                                <p>104M Views
+                            </div>
+
+                        </div>
+
+                        <div class="space-x-4 flex-shrink-0">
+                            <span
+                                class="size-[30px] flex justify-center items-center rounded-full hover:bg-neutral-800 cursor-pointer"><img
+                                    src="/images/threedots.png" alt="threedots" /></span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- another video section -->
+
+        <div class="px-[10px] flex flex-wrap mx-auto m-[52px]">
+            <!-- main content videos -->
+
+            <!-- <div class="mx-auto flex flex-wrap m-[52px]"> -->
+
+
+            <!-- first container -->
+            <div class="w-[420px] h-[360px] pr-[25px]">
+                <!-- thumbnail -->
+                <span class="inline-block pb-[15px]"><img src="/thumbnails/Aitools.jpg" alt="thumbnail"
+                        class="rounded-xl hover:cursor-pointer hover:scale-105 transition duration-500" /></span>
+
+                <!-- video details like chanel name video name time etc -->
+                <div class="h-90px text-white flex justify-around">
+                    <div class="flex pr-[10px]">
+                        <span
+                            class="inline-block size-[30px] p-[10px] rounded-full bg-neutral-800 hover:cursor-pointer"><img
+                                src="/images/userlogo.png" alt="chanellogo" /></span>
+                    </div>
+
+                    <div class="w-full">
+                        <!-- video name or details -->
+
+                        <div class="pr-[10px]">
+                            <p class="text-white font-semibold">
+                                Best AI tools that will make tour life easier in 2025
+                            </p>
+                        </div>
+
+                        <!-- channel name -->
+                        <div>
+                            <p class="text-gray[360] text-[13px]">Learning HUB</p>
+                        </div>
+
+                        <div class="flex">
+                            <span>
+                                <p class="text-gray[360] text-[13px]">154M Views</p>
+                            </span>
+
+                            <span class="text-gray[360] text-[13px] px-[5px]">.</span>
+
+                            <span>
+                                <p class="text-gray[360] text-[13px]">5 months ago</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-x-4 flex-shrink-0">
+                        <span
+                            class="size-[30px] flex justify-center items-center rounded-full hover:bg-neutral-800 cursor-pointer"><img
+                                src="/images/threedots.png" alt="threedots" /></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- second container -->
+            <div class="w-[420px] h-[300px] pr-[25px]">
+                <!-- thumbnail -->
+                <span class="inline-block pb-[15px]"><img src="/thumbnails/tution.jpg" alt="thumbnail"
+                        class="rounded-xl hover:cursor-pointer hover:scale-105 transition duration-500" /></span>
+
+                <!-- video details like chanel name video name time etc -->
+                <div class="h-90px text-white flex justify-around">
+                    <div class="flex pr-[10px]">
+                        <span
+                            class="inline-block size-[30px] p-[10px] rounded-full bg-neutral-800 hover:cursor-pointer"><img
+                                src="/images/userlogo.png" alt="chanellogo" /></span>
+                    </div>
+
+                    <div class="w-full">
+                        <!-- video name or details -->
+
+                        <div class="pr-[10px]">
+                            <p class="text-white font-semibold">
+                                Basic to english tutorials || Become fluent in enlish speaking and writting
+                            </p>
+                        </div>
+
+                        <!-- channel name -->
+                        <div>
+                            <p class="text-gray[360] text-[13px]">EASY-coaching</p>
+                        </div>
+
+                        <div class="flex">
+                            <span>
+                                <p class="text-gray[360] text-[13px]">80M Views</p>
+                            </span>
+
+                            <span class="text-gray[360] text-[13px] px-[5px]">.</span>
+
+                            <span>
+                                <p class="text-gray[360] text-[13px]">2 years ago</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-x-4 flex-shrink-0">
+                        <span
+                            class="size-[30px] flex justify-center items-center rounded-full hover:bg-neutral-800 cursor-pointer"><img
+                                src="/images/threedots.png" alt="threedots" /></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- third container -->
+            <div class="w-[420px] h-[300px] pr-[25px]">
+                <!-- thumbnail -->
+                <span class="inline-block pb-[15px]"><img src="/thumbnails/Watches.jpg" alt="thumbnail"
+                        class="rounded-xl hover:cursor-pointer hover:scale-105 transition duration-500" /></span>
+
+                <!-- video details like chanel name video name time etc -->
+                <div class="h-90px text-white flex justify-around">
+                    <div class="flex pr-[10px]">
+                        <span
+                            class="inline-block size-[30px] p-[10px] rounded-full bg-neutral-800 hover:cursor-pointer"><img
+                                src="/images/userlogo.png" alt="chanellogo" /></span>
+                    </div>
+
+                    <div class="w-full">
+                        <!-- video name or details -->
+
+                        <div class="pr-[10px]">
+                            <p class="text-white font-semibold">
+                                Worlds most espensive watches ever || #billinior
+                            </p>
+                        </div>
+
+                        <!-- channel name -->
+                        <div>
+                            <p class="text-gray[360] text-[13px]">Mrs. eastern</p>
+                        </div>
+
+                        <div class="flex">
+                            <span>
+                                <p class="text-gray[360] text-[13px]">895M Views</p>
+                            </span>
+
+                            <span class="text-gray[360] text-[13px] px-[5px]">.</span>
+
+                            <span>
+                                <p class="text-gray[360] text-[13px]">9 years ago</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-x-4 flex-shrink-0">
+                        <span
+                            class="size-[30px] flex justify-center items-center rounded-full hover:bg-neutral-800 cursor-pointer"><img
+                                src="/images/threedots.png" alt="threedots" /></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- forth -->
+
+            <div class="w-[420px] h-[300px] pr-[25px]">
+                <!-- thumbnail -->
+                <span class="inline-block pb-[15px]"><img src="/thumbnails/money.jpg" alt="thumbnail"
+                        class="rounded-xl hover:cursor-pointer hover:scale-105 transition duration-500" /></span>
+
+                <!-- video details like chanel name video name time etc -->
+                <div class="h-90px text-white flex justify-around">
+                    <div class="flex pr-[10px]">
+                        <span
+                            class="inline-block size-[30px] p-[10px] rounded-full bg-neutral-800 hover:cursor-pointer"><img
+                                src="/images/userlogo.png" alt="chanellogo" /></span>
+                    </div>
+
+                    <div class="w-full">
+                        <!-- video name or details -->
+
+                        <div class="pr-[10px]">
+                            <p class="text-white font-semibold">
+                                Things you should to earn more || before after #workhard #worksmart
+                            </p>
+                        </div>
+
+                        <!-- channel name -->
+                        <div>
+                            <p class="text-gray[360] text-[13px]">Coach yash</p>
+                        </div>
+
+                        <div class="flex">
+                            <span>
+                                <p class="text-gray[360] text-[13px]">585M Views</p>
+                            </span>
+
+                            <span class="text-gray[360] text-[13px] px-[5px]">.</span>
+
+                            <span>
+                                <p class="text-gray[360] text-[13px]">1 month ago</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-x-4 flex-shrink-0">
+                        <span
+                            class="size-[30px] flex justify-center items-center rounded-full hover:bg-neutral-800 cursor-pointer"><img
+                                src="/images/threedots.png" alt="threedots" /></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- fifth -->
+
+            <div class="w-[420px] h-[300px] pr-[25px]">
+                <!-- thumbnail -->
+                <span class="inline-block pb-[15px]"><img src="/thumbnails/videoediting.jpg" alt="thumbnail"
+                        class="rounded-xl hover:cursor-pointer hover:scale-105 transition duration-500" /></span>
+
+                <!-- video details like chanel name video name time etc -->
+                <div class="h-90px text-white flex justify-around">
+                    <div class="flex pr-[10px]">
+                        <span
+                            class="inline-block size-[30px] p-[10px] rounded-full bg-neutral-800 hover:cursor-pointer"><img
+                                src="/images/userlogo.png" alt="chanellogo" /></span>
+                    </div>
+
+                    <div class="w-full">
+                        <!-- video name or details -->
+
+                        <div class="pr-[10px]">
+                            <p class="text-white font-semibold">
+                                Learn video editing like a pro || 10 secret tips #videoediting
+                            </p>
+                        </div>
+
+                        <!-- channel name -->
+                        <div>
+                            <p class="text-gray[360] text-[13px]">step by step learning</p>
+                        </div>
+
+                        <div class="flex">
+                            <span>
+                                <p class="text-gray[360] text-[13px]">500M Views</p>
+                            </span>
+
+                            <span class="text-gray[360] text-[13px] px-[5px]">.</span>
+
+                            <span>
+                                <p class="text-gray[360] text-[13px]">1 years ago</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-x-4 flex-shrink-0">
+                        <span
+                            class="size-[30px] flex justify-center items-center rounded-full hover:bg-neutral-800 cursor-pointer"><img
+                                src="/images/threedots.png" alt="threedots" /></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIXTH -->
+
+            <div class="w-[420px] h-[300px] pr-[25px]">
+                <!-- thumbnail -->
+                <span class="inline-block pb-[15px]"><img src="/thumbnails/Graphics_design.jpg" alt="thumbnail"
+                        class="rounded-xl hover:cursor-pointer hover:scale-105 transition duration-500" /></span>
+
+                <!-- video details like chanel name video name time etc -->
+                <div class="h-90px text-white flex justify-around">
+                    <div class="flex pr-[10px]">
+                        <span
+                            class="inline-block size-[30px] p-[10px] rounded-full bg-neutral-800 hover:cursor-pointer"><img
+                                src="/images/userlogo.png" alt="chanellogo" /></span>
+                    </div>
+
+                    <div class="w-full">
+                        <!-- video name or details -->
+
+                        <div class="pr-[10px]">
+                            <p class="text-white font-semibold">
+                                How to learn Graphics designing from scratch || 2025 #graphicsdesign #learning
+                            </p>
+                        </div>
+
+                        <!-- channel name -->
+                        <div>
+                            <p class="text-gray[360] text-[13px]">Mr Shukla yt</p>
+                        </div>
+
+                        <div class="flex">
+                            <span>
+                                <p class="text-gray[360] text-[13px]">200M Views</p>
+                            </span>
+
+                            <span class="text-gray[360] text-[13px] px-[5px]">.</span>
+
+                            <span>
+                                <p class="text-gray[360] text-[13px]">3 years ago</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-x-4 flex-shrink-0">
+                        <span
+                            class="size-[30px] flex justify-center items-center rounded-full hover:bg-neutral-800 cursor-pointer"><img
+                                src="/images/threedots.png" alt="threedots" /></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+</body>
+
+</html>
