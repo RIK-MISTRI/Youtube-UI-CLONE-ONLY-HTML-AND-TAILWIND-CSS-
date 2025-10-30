@@ -16,22 +16,7 @@
 
 ## 🌍 Live Demo  
 🔗 **[View it on GitHub Pages](#)**  
-*(Replace this link with your GitHub Pages URL once deployed)*
-
----
-
-## 📸 Preview  
-<p align="center">
-  <img src="thumbnails/desktop-preview.png" alt="Desktop Preview" width="90%"/><br/>
-  <em>Desktop Layout</em>
-</p>
-
-<p align="center">
-  <img src="thumbnails/mobile-preview.png" alt="Mobile Preview" width="40%"/><br/>
-  <em>Mobile Responsive View</em>
-</p>
-
----
+*(https://rik-mistri.github.io/Youtube-UI-CLONE-ONLY-HTML-AND-TAILWIND-CSS-/)*
 
 ## 🚀 Features
 
